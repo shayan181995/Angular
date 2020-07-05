@@ -1,0 +1,13 @@
+<h3>Student Data </h3>
+
+<input type="text" placeholder="First Name" [(ngModel)]="FName" />
+<input type="text" placeholder="Last Name" [(ngModel)]="LName" />
+<input type="text" placeholder="Age" [(ngModel)]="Age" />
+<input type="text" placeholder="Department" [(ngModel)]="Dept" />
+
+<h3>Students</h3>
+
+<p *ngFor="let student of students">
+    Student: {{student.firstName}} - {{student.LastName}} - {{student.Age}} - {{student.Dept}}
+    <button (click)="setValue(student)">Click Here to display inside input form</button>
+</p>
