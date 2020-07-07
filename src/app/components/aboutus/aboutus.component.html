@@ -1,0 +1,27 @@
+<h3>Student Information</h3>
+<form [formGroup]="form">
+
+    <input type="text" placeholder="First Name" formControlName="FirstName" />
+    <div *ngIf="form.controls.FirstName.invalid && (form.controls.FirstName.dirty || form.controls.FirstName.touched)">
+        <span *ngIf="form.controls.FirstName.errors.required ">First Name is Required</span>
+    </div>
+    <br/><br/>
+    <input type=" text " placeholder="Last Name " formControlName="LastName" />
+    <div *ngIf="form.controls.LastName.invalid && (form.controls.LastName.dirty || form.controls.LastName.touched)">
+        <span *ngIf="form.controls.LastName.errors.required ">Last Name is Required</span>
+    </div>
+    <br/><br/>
+    <input type="number " placeholder="Age " formControlName="Age" />
+    <div *ngIf="form.controls.Age.invalid && (form.controls.Age.dirty || form.controls.Age.touched)">
+        <span *ngIf="form.controls.Age.errors?.required ">Age is Required</span>
+        <span *ngIf="form.controls.Age.errors?.min ">Minimum Age is 10</span>
+        <span *ngIf="form.controls.Age.errors?.max ">Maximum Age is 25</span>
+    </div>
+    <br/><br/>
+    <input type="text " placeholder="Department " formControlName="Dept" />
+    <div *ngIf="form.controls.Dept.invalid && (form.controls.Dept.dirty || form.controls.Dept.touched)">
+        <span *ngIf="form.controls.Dept.errors.required ">Department is Required</span>
+    </div>
+    <br/><br/> Is Active? <input type="checkbox" formControlName="IsActive">
+    <br/><br/><button (click)="submit()">Submit</button>
+</form>
