@@ -9,6 +9,10 @@ import { InlineComponent } from './components/Inline/Inline.component';
 import { UserprofileComponent } from './components/userprofile/userprofile.component';
 import { StudentsComponent } from './components/students/students.component';
 import { AboutusComponent } from './components/aboutus/aboutus.component';
+import { StudentComponent } from './components/student/student.component';
+import { SideNavComponent } from './components/side-nav/side-nav.component';
+import { HomeComponent } from './components/home/home.component';
+import { LoginComponent } from './components/login/login.component';
 
 
 @NgModule({
@@ -20,6 +24,10 @@ import { AboutusComponent } from './components/aboutus/aboutus.component';
     InlineComponent,
     StudentsComponent,
     AboutusComponent,
+    StudentComponent,
+    SideNavComponent,
+    HomeComponent,
+    LoginComponent,
     
   ],
   imports: [
