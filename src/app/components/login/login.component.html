@@ -1,5 +1,6 @@
 <form>
-    <label>Student Name:</label><input type="text" [(ngModel)]="myname" name="something" /><br/><br/>
+    <label>Email:</label><input type="text" [(ngModel)]="myname" name="something" /><br/><br/>
     <label>Password:</label><input type="password" [(ngModel)]="password" name="something2" /><br/><br/>
     <button (click)="CheckLogin()"> Submit</button>
 </form>
+<br/> Not Already a member? <a [routerLink]="['/register']">Register Here</a>

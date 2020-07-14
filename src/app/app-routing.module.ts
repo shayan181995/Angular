@@ -4,14 +4,15 @@ import { StudentComponent } from './components/student/student.component';
 import { StudentsComponent } from './components/students/students.component';
 import { LoginComponent } from './components/login/login.component';
 import { HomeComponent } from './components/home/home.component';
-
+import { RegisterComponent } from './components/register/register.component';
 
 const routes: Routes = [
   {path: '',pathMatch:"full", redirectTo: "login" },
 
   {path: 'Home',component: HomeComponent },
   { path: 'student', component: StudentComponent },
-  { path: 'login', component: LoginComponent }
+  { path: 'login', component: LoginComponent },
+  { path: 'register', component: RegisterComponent },
 
 ];
 
