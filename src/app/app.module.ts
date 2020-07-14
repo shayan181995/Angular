@@ -13,6 +13,8 @@ import { StudentComponent } from './components/student/student.component';
 import { SideNavComponent } from './components/side-nav/side-nav.component';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
+import { RegisterComponent } from './components/register/register.component';
+import { HttpClientModule  } from '@angular/common/http';
 
 
 @NgModule({
@@ -28,13 +30,15 @@ import { LoginComponent } from './components/login/login.component';
     SideNavComponent,
     HomeComponent,
     LoginComponent,
+    RegisterComponent
     
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule 
   ],
   providers: [],
   bootstrap: [AppComponent]
