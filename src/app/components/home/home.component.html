@@ -1,3 +1,22 @@
-<app-side-nav></app-side-nav>
-<app-students>
-</app-students>
+<h3>Parent Component</h3>
+
+<span *ngIf="student.length>0">
+<table >
+    <tr>
+        <td>First Name</td>
+        <td>Last Name</td>
+        <td>Age</td>
+        <td>Department</td>
+    </tr>
+    <tr *ngFor="let student of student">
+        <td>{{student.FirstName}}</td>
+        <td>{{student.LastName}}</td>
+        <td>{{student.Age}}</td>
+        <td>{{student.Dept}}</td>
+    </tr>
+    
+
+</table>
+</span>
+<br/>
+<app-home-content [students]="students" (userData)="onUserData($event)"></app-home-content>

@@ -5,9 +5,22 @@
 <input type="text" placeholder="Age" [(ngModel)]="Age" />
 <input type="text" placeholder="Department" [(ngModel)]="Dept" /> -->
 
-<h3>Students</h3>
 
-<p *ngFor="let student of students">
-    Student: {{student.FirstName}} - {{student.LastName}}
-    <button [routerLink]="['/student',student]">View Details</button>
-</p>
+<h4>Child Componenet</h4>
+<table>
+    <tr>
+        <td>First Name</td>
+        <td>Last Name</td>
+        <td>Age</td>
+        <td>Department</td>
+    </tr>
+    <tr>
+        <td>{{student.FirstName}}</td>
+        <td>{{student.LastName}}</td>
+        <td>{{student.Age}}</td>
+        <td>{{student.Dept}}</td>
+    </tr>
+
+</table>
+
+<app-student (userData)="onuserData($event)"></app-student>

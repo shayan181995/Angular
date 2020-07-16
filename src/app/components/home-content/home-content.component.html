@@ -1,8 +1,6 @@
-<!-- <app-side-nav></app-side-nav> -->
-
-
+<span style="font-weight: bold;">Child Component</span>
+<br/><br/>
 <p *ngFor="let student of students">
-    <span style="font-weight: bold;">Parent Component</span> <br/><br/>
     <input type="checkbox" (click)="getUser(student)"> Student: {{student.FirstName}} - {{student.LastName}}
     <!-- <app-student [getUser]="student"></app-student> -->
 </p>
